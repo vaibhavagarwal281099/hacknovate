@@ -6,24 +6,49 @@
 -->
 <html>
 	<head>
-		<title>Landed by HTML5 UP</title>
+		<title>Hacknovate 1.0</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		.accordion {
+		  background-color: #eee;
+		  color: #444;
+		  cursor: pointer;
+		  padding: 18px;
+		  width: 100%;
+		  border: none;
+		  text-align: left;
+		  outline: none;
+		  font-size: 15px;
+		  transition: 0.4s;
+		}
+
+		.active, .accordion:hover {
+		  background-color: #ccc; 
+		}
+
+		.panel {
+		  padding: 0 18px;
+		  display: none;
+		  background-color: white;
+		  overflow: hidden;
+		}
+		</style>
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<img src="./images/abesit.png" alt="ABESIT" style="float: left; width: 300px; margin-top: 10px; margin-left: 10px;">
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li>
-								<a href="#">Layouts</a>
-								<ul>
+								<a href="#about">About the hackathon</a>
+<!-- 								<ul>
 									<li><a href="left-sidebar.html">Left Sidebar</a></li>
 									<li><a href="right-sidebar.html">Right Sidebar</a></li>
 									<li><a href="no-sidebar.html">No Sidebar</a></li>
@@ -36,10 +61,12 @@
 											<li><a href="#">Option 4</a></li>
 										</ul>
 									</li>
-								</ul>
+								</ul> -->
 							</li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
+							<li><a href="#two">Themes</a></li>
+							<li><a href="#footer">FAQ's</a></li>
+							<li><a href="#contact">Contact Us</a></li>
+							<li><a href="#" class="button primary">Register</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -48,11 +75,40 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h2>The future has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just apps. Lots of mother flipping apps.</p>
+							<h2>Hacknovate 1.0</h2>
+							<p id="demo"></p>
+							<script type="text/javascript">
+								// Set the date we're counting down to
+								var countDownDate = new Date("Oct 10, 2019 23:59:59").getTime();
+
+								// Update the count down every 1 second
+								var x = setInterval(function() {
+
+								  // Get today's date and time
+								  var now = new Date().getTime();
+								    
+								  // Find the distance between now and the count down date
+								  var distance = countDownDate - now;
+								    
+								  // Time calculations for days, hours, minutes and seconds
+								  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+								  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+								  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+								  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+								    
+								  // Output the result in an element with id="demo"
+								  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+								  + minutes + "m " + seconds + "s ";
+								    
+								  // If the count down is over, write some text 
+								  if (distance < 0) {
+								    clearInterval(x);
+								    document.getElementById("demo").innerHTML = "EXPIRED";
+								  }
+								}, 1000);
+							</script>
 						</header>
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+						<span class="image"><img src="images/logo.png" alt="" style="padding-top: 4em; border-radius: 10px;"></span>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
@@ -60,28 +116,19 @@
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
 					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-					<div class="content">
+					<div class="content" id="about">
 						<div class="container">
 							<div class="row">
 								<div class="col-4 col-12-medium">
 									<header>
-										<h2>Odio faucibus ipsum integer consequat</h2>
-										<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
+										<h2>About <br>The <br>Hackathon</h2>
 									</header>
 								</div>
 								<div class="col-4 col-12-medium">
-									<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-									Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-									augue varius tempus lobortis porttitor accumsan consequat
-									adipiscing lorem dolor.</p>
+									<p style="margin-top: 30px; font-size: 30px;">Einstein once said, <br>"<q><b>The only source of knowledge is experience."</b></q></p>
 								</div>
 								<div class="col-4 col-12-medium">
-									<p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
-									adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-									Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-									mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-									ipsum dolor nullam.</p>
+									<p>At Hacknovate 2019, we bring together India’s best coders, developers, designers, innovators, creators and entrepreneurs of tomorrow. Hacknovate is geared up for those who are passionate about building, designing and innovating. It is a 24 Hr event where the enthusiasts meet, develop and compete in the product prototyping competition.</p>
 								</div>
 							</div>
 						</div>
@@ -91,113 +138,41 @@
 
 			<!-- Two -->
 				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/fintech.jpg" alt="" /></span>
+					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
 					<div class="content">
 						<header>
-							<h2>FinTech</h2>
-							
+							<h2>Interdum amet non magna accumsan</h2>
+							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
 						</header>
-						<p> Your goal is to come up with a technically feasible and actionable solution, that makes business sense and addresses the needs of end-users. At the end of the hackathon we expect you to pitch and submit your project, including a concept description, a business model and a mockup or a demo.</p>
-						<!-- <ul class="actions">
+						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
+						<ul class="actions">
 							<li><a href="#" class="button">Learn More</a></li>
-						</ul -->
+						</ul>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
 
 			<!-- Three -->
 				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/com.jpg" alt="" /></span>
+					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
 					<div class="content">
 						<header>
-							<h2>Smart communication/citizen service</h2>
-							<!-- <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p> -->
+							<h2>Interdum felis blandit praesent sed augue</h2>
+							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
 						</header>
 						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<!-- <ul class="actions">
+						<ul class="actions">
 							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
+						</ul>
 					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
 				</section>
-
-
-
-				<!-- ddfg -->
-
-					<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/wast.jpg" alt="" style="width: 10px;"></span>
-					<div class="content">
-						<header>
-							<h2>Waste management</h2>
-						</header>
-						<p>A growing population and economy, which means increased volumes of waste generated. This puts pressure on waste management facilities, which are already in short supply.
-Increased complexity of the waste stream because of urbanisation and industrialisation. The complexity of the waste stream directly affects the complexity of its management, which is compounded when hazardous waste mixes with general waste.</p>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/mind.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Energy Efficiency</h2>
-							
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
-
-
-
-					<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/health.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Smart Healthcare system</h2>
-							<!-- <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p> -->
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/mind.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Open Innovation</h2>
-							<!-- <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p> -->
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
-
-
-
-                  <!-- jkklk -->
 
 			<!-- Four -->
 				<section id="four" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
-							<h2>Accumsan sed tempus adipiscing blandit</h2>
+							<h2>Our Proud Sponsors</h2>
 							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
 						</header>
 						<div class="box alt">
@@ -243,24 +218,70 @@ Increased complexity of the waste stream because of urbanisation and industriali
 				</section>
 
 			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
+				<section id="contact" class="wrapper style2 special fade">
 					<div class="container">
 						<header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
+							<h2>Contact Us</h2>
 						</header>
-						<form method="post" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
+						<div class="row" style="display: flex;">
+							<div class="column" style="flex: 50%; padding: 10px;">
+								<img src="./images/download.png">
+								<a href="mailto:devrajkumar111@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><p style="color: white"><u><b>Devraj Kumar</b></u></p></a>
 							</div>
-						</form>
+							<div class="column" style="flex: 50%; padding: 10px;">
+								<img src="./images/download.png">
+								<a href="mailto:shivatiwari757@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><p style="color: white"><u><b>Shiva Tiwari</b></u></p></a>
+							</div>
+						</div>
 					</div>
 				</section>
 
 			<!-- Footer -->
 				<footer id="footer">
-					<ul class="icons">
+					<p style="font-size: 2em;">Frequently Asked Questions</p>
+					<button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightgreen;">Who can attend?</button>
+					<div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightblue;">
+					  <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b></p>
+					</div>
+
+					<button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightgreen;">How big the teams can be?</button>
+					<div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightblue;">
+					  <p><b>>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b></p>
+					</div>
+
+					<button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightgreen;">Is there any registration fees?</button>
+					<div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightblue;">
+					  <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b></p>
+					</div>
+
+					<button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightgreen;">What is the last date of registration?</button>
+					<div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightblue;">
+					  <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b></p>
+					</div>
+
+					<button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightgreen;">What all facilities be provided at the venue?</button>
+					<div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px; background-color: lightblue;">
+					  <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b></p>
+					</div>
+
+					<script>
+					var acc = document.getElementsByClassName("accordion");
+					var i;
+
+					for (i = 0; i < acc.length; i++) {
+					  acc[i].addEventListener("click", function() {
+					    this.classList.toggle("active");
+					    var panel = this.nextElementSibling;
+					    if (panel.style.display === "block") {
+					      panel.style.display = "none";
+					    } else {
+					      panel.style.display = "block";
+					    }
+					  });
+					}
+					</script>
+				
+<!-- 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
@@ -270,8 +291,31 @@ Increased complexity of the waste stream because of urbanisation and industriali
 					</ul>
 					<ul class="copyright">
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+					</ul> -->
 				</footer>
+
+				<!-- Developers -->
+				<section id="contact" class="wrapper style2 special fade">
+					<div class="container">
+						<header>
+							<h2>Developing Team</h2>
+						</header>
+						<div class="row" style="display: flex;">
+							<div class="column" style="flex: 33.3%; padding: 10px;">
+								<img src="./images/download.png">
+								<a href="mailto:hariomkushwaha@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><p style="color: white"><u><b>Hariom Kushwaha</b></u></p></a>
+							</div>
+							<div class="column" style="flex: 33.3%; padding: 10px;">
+								<img src="./images/download.png">
+								<a href="mailto:tarunagarwal27.99@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><p style="color: white"><u><b>Tarun Agarwal</b></u></p></a>
+							</div>
+							<div class="column" style="flex: 33.3%; padding: 10px;">
+								<img src="./images/download.png">
+								<a href="mailto:kmrsatyarth9@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><p style="color: white"><u><b>Kumar Satyarth</b></u></p></a>
+							</div>
+						</div>
+					</div>
+				</section>
 
 		</div>
 
@@ -284,6 +328,5 @@ Increased complexity of the waste stream because of urbanisation and industriali
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
