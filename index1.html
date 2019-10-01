@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Hacknovate 1.0</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+        
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="is-preload landing">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <img src="./images/abesit.png" alt="ABESIT" style="float: left; width: 300px; margin-top: 10px; margin-left: 10px;">
+            <img src="./images/logot.png" alt="ABESIT" style="float: left; width: 170px; margin-top: -10px; margin-left: 5px;">
+            <nav id="nav" style="position: fixed;">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#about">About the hackathon</a>
+                        <!-- 								<ul>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li>
+								</ul> -->
+                    </li>
+                    <li><a href="#two">Themes</a></li>
+                    <li><a href="#footer">FAQ's</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#" class="button primary">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner" >
+        	
+            <div class="content">
+                <header>
+                    <h2>Hacknovate 1.0</h2>
+                    <p id="demo"></p>
+                    <script type="text/javascript">
+                        // Set the date we're counting down to
+                        var countDownDate = new Date("Oct 10, 2019 23:59:59").getTime();
+
+                        // Update the count down every 1 second
+                        var x = setInterval(function() {
+
+                            // Get today's date and time
+                            var now = new Date().getTime();
+
+                            // Find the distance between now and the count down date
+                            var distance = countDownDate - now;
+
+                            // Time calculations for days, hours, minutes and seconds
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            // Output the result in an element with id="demo"
+                            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                                minutes + "m " + seconds + "s ";
+
+                            // If the count down is over, write some text 
+                            if (distance < 0) {
+                                clearInterval(x);
+                                document.getElementById("demo").innerHTML = "EXPIRED";
+                            }
+                        }, 1000);
+                    </script>
+                </header>
+                <span class="image"><img src="images/logo.png" alt="" style="padding-top: 4em; border-radius: 10px;"></span>
+            </div>
+            <a href="#one" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- One -->
+        <section id="one" class="spotlight style1 bottom">
+            <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+            <div class="content" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 col-12-medium">
+                            <header>
+                                <h2>About <br>The <br>Hackathon</h2>
+                            </header>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <p style="margin-top: 30px; font-size: 30px;">Einstein once said, <br>"<q><b>The only source of knowledge is experience."</b></q></p>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <p>At Hacknovate 2019, we bring together India’s best coders, developers, designers, innovators, creators and entrepreneurs of tomorrow. Hacknovate is geared up for those who are passionate about building, designing and innovating.
+                                It is a 24 Hr event where the enthusiasts meet, develop and compete in the product prototyping competition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#two" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="spotlight style2 right">
+            <span class="image fit main"><img src="images/fintech.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>FinTech</h2>
+
+                </header>
+                <p> Your goal is to come up with a technically feasible and actionable solution, that makes business sense and addresses the needs of end-users. At the end of the hackathon we expect you to pitch and submit your project, including a concept
+                    description, a business model and a mockup or a demo.</p>
+                <!-- <ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul -->
+            </div>
+            <a href="#three" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="spotlight style3 left">
+            <span class="image fit main bottom"><img src="images/com.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>Smart communication/citizen service</h2>
+                    <!-- <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p> -->
+                </header>
+                <p>The design of energy efficient embedded communication centric devices for internet –of-thing as well as emerging smart and wearable mobile devices</p>
+                <!-- <ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul> -->
+            </div>
+            <a href="#four" class="goto-next scrolly">Next</a>
+        </section>
+
+
+
+        <!-- ddfg -->
+
+        <section id="two" class="spotlight style2 right">
+            <span class="image fit main"><img src="images/wast.jpg" alt="""></span>
+            <div class="content">
+                <header>
+                    <h2>Waste management</h2>
+                </header>
+                <p>A growing population and economy, which means increased volumes of waste generated. This puts pressure on waste management facilities, which are already in short supply. Increased complexity of the waste stream because of urbanisation
+                    and industrialisation. The complexity of the waste stream directly affects the complexity of its management, which is compounded when hazardous waste mixes with general waste.</p>
+                <!-- <ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul> -->
+            </div>
+            <a href="#three" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="spotlight style3 left">
+            <span class="image fit main bottom"><img src="images/bulb.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>Energy Efficiency</h2>
+
+                </header>
+                <p>To energize the ever-growing innovation eco-system and invite ideas and startups working in the domain of data analytics and look for solutions that can potentially transform the energy efficiency sector.</p>
+                <!-- <ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul> -->
+            </div>
+            <a href="#four" class="goto-next scrolly">Next</a>
+        </section>
+
+
+
+        <section id="two" class="spotlight style2 right">
+            <span class="image fit main"><img src="images/health.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>Smart Healthcare system</h2>
+                    <!-- <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p> -->
+                </header>
+                <p> In India, the primary focus is on affordability and accessibility of healthcare to all. Under this theme, students need to innovate new products and make them in India to enhance affordability and access of healthcare solutions.</p>
+                <!-- <ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul> -->
+            </div>
+            <a href="#three" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="spotlight style3 left">
+            <span class="image fit main bottom"><img src="images/mind.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>Open Innovation</h2>
+                    <!-- <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p> -->
+                </header>
+                <p>The aim is to create, in teams, innovative projects to support and further the development, resilience, and sustainability of the city, as well as the well-being of its citizens.</p>
+                <!-- <ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul> -->
+            </div>
+            <a href="#four" class="goto-next scrolly">Next</a>
+        </section>
+
+
+        <!-- Four -->
+        <section id="four" class="wrapper style1 special fade-up">
+            <div class="container">
+                <header class="major">
+                    <h2>Our Past Sponsors</h2>
+              <!--       <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p> -->
+                </header>
+                <div class="box alt">
+                    <div class="row gtr-uniform">
+                        <section class="col-4 col-6-medium col-12-xsmall">
+                            <img src="./images/aptron.png" style="max-width: 60px;">
+                            <h3>Aptron India</h3>
+                            <p>APTRON Solutions NO.1 Training Institute for IT Software Hardware & Networking Courses in Noida provided by APTRON Solutions Pvt. ltd.</p>
+                        </section>
+                        <section class="col-4 col-6-medium col-12-xsmall">
+                            <img src="./images/cepta.png" style="max-width: 60px;">
+                            <h3>Cetpa</h3>
+                            <p>CETPA imparts Professional Training to individuals from diverse field to enhance and sharpen their technical skills so that they get jobs in to and leading companies.</p>
+                        </section>
+                        <section class="col-4 col-6-medium col-12-xsmall">
+                            <img src="./images/noble.gif" style="max-width: 60px;">
+                            <h3>Nobleprog</h3>
+                            <p>Our group of consultants, trainers and academics are considered experts in their field of knowledge with over 100 years of experience, across a range of some of the most innovative and leading edge technologies and methods in the market place today.</p>
+                        </section>
+                        <section class="col-4 col-6-medium col-12-xsmall">
+                            <img src="./images/paytm.png" style="max-width: 60px;">
+                            <h3>Patym</h3>
+                            <p>Make easy and instant mobile prepaid online recharge, wallet Payments, Data Card & DTH Recharge for Airtel, Aircel, Idea, Vodafone, BSNL, Reliance MTNL, ...
+                                  </p>
+                        </section>
+                        <section class="col-4 col-6-medium col-12-xsmall">
+                            <img src="./images/tcs.png" style="max-width: 60px;">
+                            <h3>TCS</h3>
+                            <p>Global Leader in IT Services, Consulting, Technology and Digital Solutions with a Large Network of Innovation & Delivery Centers.</p>
+                        </section>
+                       <!--  <section class="col-4 col-6-medium col-12-xsmall">
+                            <span class="icon solid alt major fa-lock"></span>
+                            <h3>Massa arcu accumsan</h3>
+                            <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                        </section> -->
+                    </div>
+                </div>
+                <footer class="major">
+                   <!--  <ul class="actions special">
+                        <li><a href="#" class="button">Magna sed feugiat</a></li>
+                    </ul> -->
+                </footer>
+            </div>
+        </section>
+
+        <!-- Five -->
+        <section id="contact" class="wrapper style2 special fade">
+            <div class="container">
+                <header>
+                    <h2>Contact Us</h2>
+                </header>
+                <div class="row" style="display: flex;">
+                    <div class="column" style="flex: 50%; padding: 10px;">
+                        <img src="./images/download.png">
+                        <a href="mailto:devrajkumar111@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
+                            <p style="color: white"><u><b>Devraj Kumar</b></u></p>
+                        </a>
+                    </div>
+                    <div class="column" style="flex: 50%; padding: 10px;">
+                        <img src="./images/download.png">
+                        <a href="mailto:shivatiwari757@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
+                            <p style="color: white"><u><b>Shiva Tiwari</b></u></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p style="font-size: 2em;">Frequently Asked Questions</p>
+            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">Who can attend?</button>
+            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
+                <p></p>
+            </div>
+
+            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">How big the teams can be?</button>
+            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
+                <p></p>
+            </div>
+
+            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">Is there any registration fees?</button>
+            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
+                <p></p>
+            </div>
+
+            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">What is the last date of registration?</button>
+            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
+                <p>.</p>
+            </div>
+
+            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">What all facilities be provided at the venue?</button>
+            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
+                <p></p>
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                        } else {
+                            panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <!-- 					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul> -->
+        </footer>
+
+        <!-- Developers -->
+        <section id="contact" class="wrapper style2 special fade">
+            <div class="container">
+                <header>
+                    <h2>Developing Team</h2>
+                </header>
+                <div class="row" style="display: flex;">
+                    <div class="column" style="flex: 33.3%; padding: 10px;">
+                        <img src="./images/hari.jpeg" style="max-width: 200px" class="avatar">
+                        <a href="mailto:hariomkushwaha@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
+                            <p style="color: white"><u><b>Hariom Kushwaha</b></u></p>
+                        </a>
+                    </div>
+                    <div class="column" style="flex: 33.3%; padding: 10px;">
+                        <img src="./images/tarun.jpeg" style="max-width: 200px" class="avatar">
+                        <a href="mailto:tarunagarwal27.99@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
+                            <p style="color: white"><u><b>Tarun Agarwal</b></u></p>
+                        </a>
+                    </div>
+                    <div class="column" style="flex: 33.3%; padding: 10px;">
+                        <img src="./images/sat.jpeg" style="max-width: 200px" class="avatar">
+                        <a href="mailto:kmrsatyarth9@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
+                            <p style="color: white"><u><b>Kumar Satyarth</b></u></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
