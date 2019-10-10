@@ -3464,7 +3464,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
-		background-image: url("../../images/banner.gif"); 
+		background-image: url("../../images/banner4.gif"); 
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -3491,7 +3491,7 @@ input, select, textarea {
 			top: 0;
 			width: 100%;
 			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.65)), url("images/overlay.png");;
-			background-image: -webkit-linear-gradient(top, rgba(19, 18, 20, 0.75), rgba(20, 18, 17, 0.75)), url("images/overlay.png");;
+			background-image: -webkit-linear-gradient(top, rgba(10, 18, 20, 0.6), rgba(20, 18, 17, 0.6)), url("images/overlay.png");;
 			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.65)), url("images/overlay.png");;
 			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.65)), url("images/overlay.png");;
 		}
@@ -4233,18 +4233,18 @@ header.invert:after
 html{
 	scroll-behavior: smooth;
 }
-#greet:hover{
+/*#greet:hover{
 	color:#e44c65;
 	border:solid 9px #e44c65;
 	transition: all 0.6s;
-	-webkit-transition: all 0.6s;
+	-webkit-transition: all 0.6s;*/
 }
-#demo:hover{
+/*#demo:hover{
 	color:#e44c65;
 	border:solid 4px #e44c65;
 	transition: all 0.6s;
 	-webkit-transition: all 0.6s;
-}
+}*/
 .button{
 	border-radius: 100px;
 }
