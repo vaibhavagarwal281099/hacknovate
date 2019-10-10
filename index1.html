@@ -38,20 +38,49 @@
             overflow: hidden;
         }
     </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 </head>
 
 <body class="is-preload landing">
     <div id="page-wrapper">
+            <button onclick="topFunction()" id="mytop" title="Go to top"><i class="fa fa-chevron-up w3-hover-opacity" style="font-size:28px"></i></button>
+            <script>
+                //Get the button
+                var mybutton = document.getElementById("mytop");
+                
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 1300|| document.documentElement.scrollTop > 800) {
+                    mybutton.style.display = "block";
+                  } else {
+                    mybutton.style.display = "none";
+                  }
+                }
+                
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+            
+            </script>
 
         <!-- Header -->
-        <header id="header">
-            <img src="./images/abesit.png" alt="ABESIT" style="float: left; width: 300px; margin-top: 10px; margin-left: 10px;">
-            <img src="./images/logot.png" alt="ABESIT" style="float: left; width: 170px; margin-top: -10px; margin-left: 5px;">
-            <nav id="nav" style="position: fixed;">
+        <header id="header" style="position: fixed;background:rgba(28,28,36,0.85);border-bottom:solid 0px #e44c65;">
+            <img src="./images/abesit.png" alt="ABESIT" style="float: left; width: 75px; margin-top: 10px; margin-left: 10px;">
+            <img src="./images/logot.png" alt="ABESIT" style="float: left; width: 150px; margin-top: -10px; margin-left: 5px;">
+            <img src="./images/output.png" alt="ABESIT" style="float: left; width: 150px; margin-top: -5px; margin-left: 5px;transform: translateY(10px);">
+            <img src="./images/heading.png" alt="ABESIT" style="float: left; width: 75px; margin-top: -5px; margin-left: 5px;transform: translateY(10px);">
+            <nav id="nav" style="position: fixed;font-weight:bold;color:#e44c65;padding-top:20px;">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a class="button" href="index.html">Home</a></li>
                     <li>
-                        <a href="#about">About the hackathon</a>
+                        <a  class="button" href="#about">About the hackathon</a>
                         <!-- 								<ul>
 									<li><a href="left-sidebar.html">Left Sidebar</a></li>
 									<li><a href="right-sidebar.html">Right Sidebar</a></li>
@@ -67,24 +96,26 @@
 									</li>
 								</ul> -->
                     </li>
-                    <li><a href="#two">Themes</a></li>
-                    <li><a href="#footer">FAQ's</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#" class="button primary">Register</a></li>
+                    <li><a class="button" href="#two">Themes</a></li>
+                    <li><a class="button" href="#footer">FAQ's</a></li>
+                    <li><a class="button" href="#contact">Contact Us</a></li>
+                    <li><a href="#four" class="button primary">Register</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- Banner -->
-        <section id="banner" >
+        <section id="banner">
         	
             <div class="content">
                 <header>
-                    <h2>Hacknovate 1.0</h2>
-                    <p id="demo"></p>
+                    <h2 id="greet" style="text-weight:900;background: rgba(28,28,36,0.91);padding:30px;border-radius:100px;">Hacknovate 1.0</h2>
+                    <div style="transform: translateX(100px);">
+                    <p id="demo"  style="text-weight:800;background: rgba(28,28,36,0.91);padding:10px;border-radius:100px;width:150px"></p>
+                    </div>
                     <script type="text/javascript">
                         // Set the date we're counting down to
-                        var countDownDate = new Date("Oct 10, 2019 23:59:59").getTime();
+                        var countDownDate = new Date("Oct 18, 2019 23:59:59").getTime();
 
                         // Update the count down every 1 second
                         var x = setInterval(function() {
@@ -120,13 +151,17 @@
 
         <!-- One -->
         <section id="one" class="spotlight style1 bottom">
-            <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+            <div>
+            <h2 id="greet" class="none" style="text-weight:900;background: rgba(28,28,36,0.91);padding:30px;border-radius:100px;transform: translateY(-690px);width: 40%;margin: 2%;text-align: center;">Software Edition</h2>
+            <h2 id="greet" class="none" style="text-weight:900;background: rgba(28,28,36,0.91);padding:30px;border-radius:100px;transform: translate(850px,-828px);width: 40%;margin: 2%;text-align: center;">Hardware Edition</h2>
+            <span class="image fit main"><img src="images/pic2.jpeg" alt="" /></span>
+            </div>
             <div class="content" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="col-4 col-12-medium">
                             <header>
-                                <h2>About <br>The <br>Hackathon</h2>
+                                <h2 style="color: #e44c65;font-weight:500">About <br>The <br>Hackathon</h2>
                             </header>
                         </div>
                         <div class="col-4 col-12-medium">
@@ -134,7 +169,7 @@
                         </div>
                         <div class="col-4 col-12-medium">
                             <p>At Hacknovate 2019, we bring together India’s best coders, developers, designers, innovators, creators and entrepreneurs of tomorrow. Hacknovate is geared up for those who are passionate about building, designing and innovating.
-                                It is a 24 Hr event where the enthusiasts meet, develop and compete in the product prototyping competition.</p>
+                                It is a 12 Hr event where the enthusiasts meet, develop and compete in the product prototyping competition.</p>
                         </div>
                     </div>
                 </div>
@@ -161,7 +196,7 @@
 
         <!-- Three -->
         <section id="three" class="spotlight style3 left">
-            <span class="image fit main bottom"><img src="images/com.jpg" alt="" /></span>
+            <span class="image fit main bottom"><img src="images/com.gif" alt="" /></span>
             <div class="content">
                 <header>
                     <h2>Smart communication/citizen service</h2>
@@ -248,36 +283,21 @@
         <section id="four" class="wrapper style1 special fade-up">
             <div class="container">
                 <header class="major">
-                    <h2>Our Past Sponsors</h2>
+                    <h2>Registration</h2>
               <!--       <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p> -->
                 </header>
                 <div class="box alt">
                     <div class="row gtr-uniform">
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <img src="./images/aptron.png" style="max-width: 60px;">
-                            <h3>Aptron India</h3>
-                            <p>APTRON Solutions NO.1 Training Institute for IT Software Hardware & Networking Courses in Noida provided by APTRON Solutions Pvt. ltd.</p>
+                        <section class="col-6-medium col-12-xsmall borderline" style="flex: 50%;">
+                            <h3>Quiz</h3>
+                            <p>A quiz will be<br> organized as a part of Hacknovate 1.0 on<br> 18th Oct. It will be in two levels:<br>1. Basic level ( C/C++, Data Structure)<br>2. Intermediate level (Java, OOPS, DBMS, OS, Networking, DS, IoT)</p>
+                            <a href="http://bit.ly/hacknovate_quiz" target="_blank" class="button primary">Register</a>
                         </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <img src="./images/cepta.png" style="max-width: 60px;">
-                            <h3>Cetpa</h3>
-                            <p>CETPA imparts Professional Training to individuals from diverse field to enhance and sharpen their technical skills so that they get jobs in to and leading companies.</p>
-                        </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <img src="./images/noble.gif" style="max-width: 60px;">
-                            <h3>Nobleprog</h3>
-                            <p>Our group of consultants, trainers and academics are considered experts in their field of knowledge with over 100 years of experience, across a range of some of the most innovative and leading edge technologies and methods in the market place today.</p>
-                        </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <img src="./images/paytm.png" style="max-width: 60px;">
-                            <h3>Patym</h3>
-                            <p>Make easy and instant mobile prepaid online recharge, wallet Payments, Data Card & DTH Recharge for Airtel, Aircel, Idea, Vodafone, BSNL, Reliance MTNL, ...
-                                  </p>
-                        </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <img src="./images/tcs.png" style="max-width: 60px;">
-                            <h3>TCS</h3>
-                            <p>Global Leader in IT Services, Consulting, Technology and Digital Solutions with a Large Network of Innovation & Delivery Centers.</p>
+                        
+                        <section class="col-6-medium col-12-xsmall" style="text-align:left;flex: 50%;">
+                            <h3>Hackathon</h3>
+                            <p>The hackathon will be of 12 Hours. It will be in two edition:<br> 1. Software edition <br>2. Hardware Edition</p>
+                            <a href="http://bit.ly/hacknovate_hackathon"  target="_blank" class="button primary">Register</a>
                         </section>
                        <!--  <section class="col-4 col-6-medium col-12-xsmall">
                             <span class="icon solid alt major fa-lock"></span>
@@ -297,54 +317,69 @@
         <!-- Five -->
         <section id="contact" class="wrapper style2 special fade">
             <div class="container">
-                <header>
+                <header class="major invert contact">
                     <h2>Contact Us</h2>
                 </header>
-                <div class="row" style="display: flex;">
-                    <div class="column" style="flex: 50%; padding: 10px;">
-                        <img src="./images/download.png">
-                        <a href="mailto:devrajkumar111@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
-                            <p style="color: white"><u><b>Devraj Kumar</b></u></p>
-                        </a>
-                    </div>
-                    <div class="column" style="flex: 50%; padding: 10px;">
-                        <img src="./images/download.png">
-                        <a href="mailto:shivatiwari757@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
-                            <p style="color: white"><u><b>Shiva Tiwari</b></u></p>
-                        </a>
-                    </div>
-                </div>
+                                <!---<img src="./images/download.png">
+                                <a href="mailto:devrajkumar111@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
+                                    <p style="color: white"><u><b>Devraj Kumar</b></u></p></a>-->
+                                    <div class="row" style="display: flex;">
+                                            <div class="column" style="flex: 33.3%; padding-left: 100px;">
+                                                <img src="./images/hari.jpeg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                                <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-8475060400" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:devrajkumar111@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Devraj Kumar</b></p>
+                                            </div>
+                                            <div class="column" style="flex: 33.3%; padding-left: 100px;">
+                                                <img src="./images/tarun.jpeg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                                <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-8130771263" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:shivatiwari757@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Shiva Tiwari</b></p>
+                                                
+                                            </div>
+                                            <div class="column" style="flex: 33.3%; padding-left: 100px">
+                                                <img src="./images/sat.jpeg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                                <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-8130771263" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:bhatnagarashish1998@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Ashish Bhatnagar</b></p>
+                                                
+                                            </div>
+                                        </div>    
             </div>
         </section>
 
         <!-- Footer -->
         <footer id="footer">
+            <header class="major faq">
             <p style="font-size: 2em;">Frequently Asked Questions</p>
-            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">Who can attend?</button>
-            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
-                <p></p>
+            </header>
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">Who can attend?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">Anyone! If you’re reading this, you can attend. This includes people who have never been to a hackathon before. While experience coding and programming is a huge plus, teams will also need people with strong presentation skills and brilliant ideas.
+                    </p>
             </div>
 
-            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">How big the teams can be?</button>
-            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
-                <p></p>
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">Do I need a team?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">Teams can be up to 4 people. While you do have the option of working alone, hacknovate is a team event so working with others is encouraged.</p>
             </div>
 
-            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">Is there any registration fees?</button>
-            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
-                <p></p>
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">What do I need to bring?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">An official photo ID, a laptop and its charger. That’s about it!</p>
             </div>
 
-            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">What is the last date of registration?</button>
-            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
-                <p>.</p>
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">Do I have to compete?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">Absolutely not! However we do encourage you to take the chance, because there’s nothing to lose! Everyone has a chance to win, whether professional hacker or first-timer.
+                        We want you to have a great time and tons of fun. Just make yourself comfortable and we’re sure that you’ll take an awesome idea from concept to reality and enjoy yourself.
+                        </p>
             </div>
 
-            <button class="accordion" style="text-align: center; border-radius: 100px; margin-bottom: 10px;">What all facilities be provided at the venue?</button>
-            <div class="panel" style="color: black; text-align: center; border-radius: 100px; margin-bottom: 10px;">
-                <p></p>
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">I have never been to a hackathon, what now?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">Try it! People are super friendly, and no, you do not have to be an expert to participate. We have tons of mentors and helpers ready to help you, so please come over!</p>
             </div>
 
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">What is a hackathon?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends a hackathon to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. You don’t have to be a programmer and you certainly don’t have to be majoring in Computer Science.
+                    </p>
+            </div>
             <script>
                 var acc = document.getElementsByClassName("accordion");
                 var i;
@@ -378,30 +413,25 @@
         <!-- Developers -->
         <section id="contact" class="wrapper style2 special fade">
             <div class="container">
-                <header>
-                    <h2>Developing Team</h2>
+                <header class="major invert team">
+                    <h2 style="transform: translateX(-20px)">Developing Team</h2>
                 </header>
-                <div class="row" style="display: flex;">
-                    <div class="column" style="flex: 33.3%; padding: 10px;">
-                        <img src="./images/hari.jpeg" style="max-width: 200px" class="avatar">
-                        <a href="mailto:hariomkushwaha@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
-                            <p style="color: white"><u><b>Hariom Kushwaha</b></u></p>
-                        </a>
-                    </div>
-                    <div class="column" style="flex: 33.3%; padding: 10px;">
-                        <img src="./images/tarun.jpeg" style="max-width: 200px" class="avatar">
-                        <a href="mailto:tarunagarwal27.99@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
-                            <p style="color: white"><u><b>Tarun Agarwal</b></u></p>
-                        </a>
-                    </div>
-                    <div class="column" style="flex: 33.3%; padding: 10px;">
-                        <img src="./images/sat.jpeg" style="max-width: 200px" class="avatar">
-                        <a href="mailto:kmrsatyarth9@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top">
-                            <p style="color: white"><u><b>Kumar Satyarth</b></u></p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                        <div class="row" style="display: flex;">
+                                <div class="column" style="flex: 33.3%; padding-left: 100px;">
+                                    <img src="./images/hari.jpeg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                    <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-8130771263" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:hariomkushwaha1947@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Hariom kushwaha</b></p>
+                                </div>
+                                <div class="column" style="flex: 33.3%; padding-left: 100px;">
+                                    <img src="./images/tarun.jpeg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                    <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-9759644218" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:tarunagarwal27.99@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Tarun Agarawal</b></p>
+                                    
+                                </div>
+                                <div class="column" style="flex: 33.3%; padding-left: 100px">
+                                    <img src="./images/sat.jpeg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                    <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-7275581829" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:kmrsatyarth9@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Kumar Satyarth</b></p>
+                                    
+                                </div>
+                            </div>    
         </section>
 
     </div>
