@@ -3388,7 +3388,7 @@ input, select, textarea {
 
 	#header {
 		background: white;
-		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+		box-shadow: 0 0 0.25em 0 rgba(255,255,255,0.35);
 		cursor: default;
 		height: 5.8em;
 		left: 0;
@@ -4281,3 +4281,27 @@ html{
 	transition: all 0.6s;
 	-webkit-transition: all 0.6s;
   }
+
+
+  #four{
+	  background-color:#e44c65;
+  }
+  .borderline1{
+	text-align: left;
+	border-right: 2px solid rgb(28, 28, 36);
+	transform: translateX(24px);
+  }
+  header.major1:after {
+	transform: translateY(-30px);
+	background:rgb(28, 28, 36);
+	content: '';
+	display: inline-block;
+	height: 0.2em;
+	max-width: 20em;
+	width: 75%;
+}
+
+header.major1 {
+	margin: 0 0 4em 0;
+	position: relative;
+	text-align: center;
