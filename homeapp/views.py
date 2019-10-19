@@ -7,7 +7,12 @@ def index(request):
     db = client.get_database("site_data")
     records = db.sample
     record_list = list(records.find())
+     if request.method == "POST":
+        name=request.POST('myvalue')
+        print(name)
     return render(request, 'index.html', {'text':string, 'list':record_list})
 
 
-def home(request):
+
+   
+    
